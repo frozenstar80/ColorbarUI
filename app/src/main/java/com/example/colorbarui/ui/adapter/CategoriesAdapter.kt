@@ -11,6 +11,8 @@ import com.example.colorbarui.databinding.LytCatogoryBinding
 import com.example.colorbarui.model.CategoryList
 import java.util.*
 
+
+//adapter file
 class CategoriesAdapter(private val list: List<CategoryList>, private val activity: Activity) :
     RecyclerView.Adapter<CategoriesAdapter.GuruSevaViewHolder>() {
 
