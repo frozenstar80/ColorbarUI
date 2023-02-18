@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E3E3E3"
+    tools:context=".ui.fragment.HomeScreenFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/black_border_1dp"
+            android:hint="@string/search_products"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_top_products"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="24dp"
+            tools:listitem="@layout/lyt_top_products"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchView" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_best_product"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            android:layout_marginHorizontal="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/lipstick_product"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rv_top_products" />
+
+        <TextView
+            android:id="@+id/txt_best_seller"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/best_seller"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_best_product" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="-10dp"
+            android:layout_marginBottom="-10dp"
+            android:background="#08152B"
+            app:layout_constraintBottom_toBottomOf="@id/rv_best__seller_products"
+            app:layout_constraintTop_toTopOf="@id/rv_best__seller_products" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_best__seller_products"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:orientation="horizontal"
+            tools:listitem="@layout/lyt_product_cv"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_best_seller" />
+
+        <TextView
+            android:id="@+id/txt_steal_deal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/steal_the_deal"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_best__seller_products" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_steal_deal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/steal_the_deal_1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_steal_deal" />
+
+        <TextView
+            android:id="@+id/txt_fresh_arrival"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/fresh_arrivals"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_steal_deal" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_fresh_arrivals_products"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_fresh_arrival" />
+
+        <TextView
+            android:id="@+id/txt_irr_store_deal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/irresistible_store"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_fresh_arrivals_products" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_irr_store_deal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/irrestible_store"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_irr_store_deal" />
+
+
+        <TextView
+            android:id="@+id/txt_caregory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/shop_from_category"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_irr_store_deal" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_category_products"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_caregory" />
+
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#E1A97F"
+            android:layout_marginBottom="-10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rv_category_products" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_shipping"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="39dp"
+            android:background="@drawable/black_circle_bg"
+            android:padding="10dp"
+            android:src="@drawable/free_shipping"
+            app:layout_constraintEnd_toEndOf="@+id/txt_shipping"
+            app:layout_constraintStart_toStartOf="@+id/txt_shipping"
+            app:layout_constraintTop_toBottomOf="@id/rv_category_products" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_authentic"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="39dp"
+            android:background="@drawable/black_circle_bg"
+            android:padding="10dp"
+            android:src="@drawable/authentic"
+            app:layout_constraintEnd_toStartOf="@+id/txt_easy_return"
+            app:layout_constraintStart_toEndOf="@+id/txt_shipping"
+            app:layout_constraintTop_toBottomOf="@id/rv_category_products"
+
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_easy_return"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="39dp"
+            android:background="@drawable/black_circle_bg"
+            android:padding="10dp"
+            android:src="@drawable/easy_return"
+            app:layout_constraintEnd_toEndOf="@+id/txt_easy_return"
+            app:layout_constraintStart_toStartOf="@+id/txt_easy_return"
+            app:layout_constraintTop_toBottomOf="@id/rv_category_products" />
+
+
+        <TextView
+            android:layout_marginStart="10dp"
+            android:id="@+id/txt_shipping"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/get_free_shipping"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_shipping" />
+
+
+        <TextView
+            android:id="@+id/sub_txt_shipping"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/for_orders_above_499"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@+id/txt_shipping"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_shipping" />
+
+        <TextView
+            android:id="@+id/txt_authentic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/_100_authentic_products"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/txt_easy_return"
+            app:layout_constraintStart_toEndOf="@id/txt_shipping"
+            app:layout_constraintTop_toBottomOf="@id/img_shipping" />
+
+        <TextView
+            android:id="@+id/sub_txt_authentic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/sourced_directly_from_n_authorised_colorbar_n_stores"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@+id/txt_authentic"
+            app:layout_constraintStart_toStartOf="@+id/txt_authentic"
+            app:layout_constraintTop_toBottomOf="@id/txt_authentic" />
+        <TextView
+            android:id="@+id/txt_easy_return"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/get_easy_returns"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textAlignment="center"
+
+            app:layout_constraintStart_toEndOf="@id/txt_authentic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_shipping" />
+        <TextView
+            android:id="@+id/sub_txt_easy_return"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/_15_days_easy_returns_for_most_products"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/sub_txt_authentic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_easy_return" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">ColorbarUI</string>
+    <string name="search_products">Search products</string>
+    <string name="best_seller">Best Seller</string>
+    <string name="steal_the_deal">Steal The Deal</string>
+    <string name="fresh_arrivals">Fresh Arrivals</string>
+    <string name="irresistible_store">Irresistible Store</string>
+    <string name="shop_from_category">Shop From Category</string>
+    <string name="get_free_shipping">Get Free Shipping</string>
+    <string name="for_orders_above_499">for orders above $499</string>
+    <string name="_100_authentic_products">100% Authentic Products</string>
+    <string name="sourced_directly_from_n_authorised_colorbar_n_stores">Sourced directly from\n authorised colorbar\n stores</string>
+    <string name="get_easy_returns">Get Easy Returns</string>
+    <string name="_15_days_easy_returns_for_most_products">15-Days easy returns for most products</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="profile">Profile</string>
+    <string name="settings">Settings</string>
+    <string name="made_for_magic">MADE FOR MAGIC</string>
+    <string name="category_dec">Active swimproof
+ mascara</string>
+    <string name="active_swimproof_mascara">Active swimproof mascara</string>
+    <string name="rs_699">Rs 699</string>
+</resources>
