@@ -9,4 +9,5 @@ object Contants {
     const val SKIN = "Skin"
     const val ACCESS ="Accessories"
     const val NAILS = "Nails"
+    const val BASE_URL = "https://newsapi.org"
 }

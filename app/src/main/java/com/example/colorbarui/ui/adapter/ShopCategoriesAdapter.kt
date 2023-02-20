@@ -9,13 +9,14 @@ import com.example.colorbarui.model.CategoryList
 import java.util.*
 
 class ShopCategoriesAdapter(private val list: List<CategoryList>) :
-    RecyclerView.Adapter<ShopCategoriesAdapter.GuruSevaViewHolder>() {
+    RecyclerView.Adapter<ShopCategoriesAdapter.ShopCategoriesViewHolder>() {
 
-    class GuruSevaViewHolder(val binding: LytProductCvBinding) :
+    class ShopCategoriesViewHolder(val binding: LytProductCvBinding) :
         RecyclerView.ViewHolder(binding.root)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GuruSevaViewHolder {
-        return GuruSevaViewHolder(
+    //used for inflating the XML class to view
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ShopCategoriesViewHolder {
+        return ShopCategoriesViewHolder(
             LytProductCvBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent,
@@ -24,14 +25,16 @@ class ShopCategoriesAdapter(private val list: List<CategoryList>) :
         )
     }
 
+    // used for putting the data inside the view
     @SuppressLint("SimpleDateFormat")
-    override fun onBindViewHolder(holder: GuruSevaViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ShopCategoriesViewHolder, position: Int) {
         with(holder) {
             binding.imgCategory.setImageResource(list[position].image)
         }
     }
 
 
+    //return the count of items present in list
     override fun getItemCount(): Int {
         return list.size
 

@@ -1,11 +1,34 @@
 package com.example.colorbarui.ui.viewModel
 
+import android.util.Log
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.example.colorbarui.R
 import com.example.colorbarui.model.CategoryList
+import com.example.colorbarui.repository.CategoryRepository
 import com.example.colorbarui.utils.Contants
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class HomeViewModel : ViewModel() {
+@HiltViewModel
+class HomeViewModel @Inject constructor(private val categoryRepository: CategoryRepository) : ViewModel() {
+
+
+    private val _categoryLiveData: MutableLiveData<CategoryList> = MutableLiveData()
+    val categoryLiveData get() = _categoryLiveData
+
+    fun getCategory(){
+        viewModelScope.launch {
+            categoryRepository.getCategories().catch { e->
+                Log.d("main", "getPost: ${e.message}")
+            }.collect{response->
+                _categoryLiveData.value = response
+            }
+        }
+    }
 
     // list of categories items
     val categoryList : MutableList<CategoryList> = arrayListOf()

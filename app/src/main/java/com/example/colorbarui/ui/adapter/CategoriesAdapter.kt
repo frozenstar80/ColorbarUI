@@ -19,6 +19,7 @@ class CategoriesAdapter(private val list: List<CategoryList>, private val activi
     class GuruSevaViewHolder(val binding: LytCatogoryBinding) :
         RecyclerView.ViewHolder(binding.root)
 
+    //used for inflating the XML class to view
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GuruSevaViewHolder {
         return GuruSevaViewHolder(
             LytCatogoryBinding.inflate(
@@ -29,6 +30,7 @@ class CategoriesAdapter(private val list: List<CategoryList>, private val activi
         )
     }
 
+    // used for putting the data inside the view
     @SuppressLint("SimpleDateFormat")
     override fun onBindViewHolder(holder: GuruSevaViewHolder, position: Int) {
         with(holder) {
@@ -41,7 +43,7 @@ class CategoriesAdapter(private val list: List<CategoryList>, private val activi
         }
     }
 
-
+//return the count of items present in list
     override fun getItemCount(): Int {
         return list.size
 

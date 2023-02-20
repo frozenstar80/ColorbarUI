@@ -6,8 +6,9 @@ import androidx.fragment.app.viewModels
 import com.example.colorbarui.databinding.FragmentCategoryBinding
 import com.example.colorbarui.ui.adapter.ShopCategoriesAdapter
 import com.example.colorbarui.ui.viewModel.CategoryViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class CategoryFragment : BaseFragment<FragmentCategoryBinding>() {
     override val bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> FragmentCategoryBinding
             = FragmentCategoryBinding::inflate

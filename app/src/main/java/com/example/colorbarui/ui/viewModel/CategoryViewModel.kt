@@ -3,9 +3,13 @@ package com.example.colorbarui.ui.viewModel
 import androidx.lifecycle.ViewModel
 import com.example.colorbarui.R
 import com.example.colorbarui.model.CategoryList
+import com.example.colorbarui.repository.CategoryRepository
 import com.example.colorbarui.utils.Contants
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class CategoryViewModel : ViewModel() {
+@HiltViewModel
+class CategoryViewModel @Inject constructor(private val categoryRepository: CategoryRepository) : ViewModel() {
 
     // list of categories items
     val categoryList : MutableList<CategoryList> = arrayListOf()

@@ -6,8 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 abstract class BaseFragment<T: ViewBinding>  : Fragment() {
     protected var binding: T? = null
 //Base Fragment to handle ViewBinding and inflation
